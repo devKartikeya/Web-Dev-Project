@@ -8,6 +8,7 @@ display.addEventListener("click", () => {
     show.innerHTML = "";
 })
 
+//Event Listener on Farhenheit button
 far.addEventListener("click", () => {
     const val = display.value;
     if (val == "") {
@@ -20,6 +21,7 @@ far.addEventListener("click", () => {
     display.value = "";
 })
 
+//Event Listener on Kelvin button
 kel.addEventListener("click", () => {
     const val = display.value;
     if (val == "") {
