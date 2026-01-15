@@ -1,83 +1,60 @@
-console.log(`Form is validating...`);
+const userName = document.getElementById("name");
+const email = document.getElementById("email");
+const pwd = document.getElementById("password");
+const phone = document.getElementById("phone");
+const btn = document.getElementById("btn");
 
-let userName = document.getElementById("name");
-let email = document.getElementById("email");
-let pwd = document.getElementById("password");
-let phone = document.getElementById("phone");
-let btn = document.getElementById('btn');
-
-let nameDes = document.getElementById("nameDesc");
-let emailDes = document.getElementById("emailDesc");
-let pwdDes = document.getElementById("pwdDesc");
-let phoneDes = document.getElementById("phoneDesc");
+const validate = (element, regex, errorId) => {
+  const errorSpan = document.getElementById(errorId);
+  if (regex.test(element.value)) {
+    errorSpan.style.display = "none";
+    element.style.borderColor = "rgba(255, 255, 255, 0.2)";
+    return true;
+  } else {
+    errorSpan.style.display = "block";
+    element.style.borderColor = "#ff4d4d";
+    return false;
+  }
+};
 
 userName.addEventListener("blur", () => {
-  const regex = /^[A-Z]/;
-  let value = userName.value;
-
-  if (regex.test(value)) {
-    nameDes.style.display = "none";
-  } else {
-    nameDes.style.visibility = "visible";
-    nameDes.style.marginTop = "8px";
-    nameDes.innerHTML = "Username Not Valid !";
-    userName.value = "";
-  }
+  validate(userName, /^[A-Z][a-zA-Z0-9]{2,15}$/, "nameDesc");
 });
 
 email.addEventListener("blur", () => {
-  let emailValue = email.value;
-
-  if (emailValue.endsWith("@gmail.com")) {
-    emailDes.style.display = "none";
-  } else {
-    emailDes.style.visibility = "visible";
-    emailDes.style.marginTop = "8px";
-    emailDes.innerHTML = "Email Not Valid !";
-    email.value = "";
-  }
+  validate(email, /^[a-zA-Z0-9._%+-]+@gmail\.com$/, "emailDesc");
 });
 
 phone.addEventListener("blur", () => {
-  let length = phone.value.length;
-
-  if (length == 10) {
-    phoneDes.style.display = "none";
-  } else {
-    phoneDes.style.visibility = "visible";
-    phoneDes.style.marginTop = "8px";
-    phoneDes.innerHTML = "Enter a valid Phone Number !";
-    phone.value = "";
-  }
+  validate(phone, /^[0-9]{10}$/, "phoneDesc");
 });
 
 pwd.addEventListener("blur", () => {
-  let pwdValue = pwd.value;
-
-  const numRegex = /[0-9]{1,10}/;
-  if (pwdValue.length > 6 && numRegex.test(pwdValue)) {
-    pwdDes.style.display = "none";
+  // Requires length > 6 and at least one digit
+  const hasNumber = /\d/;
+  if (pwd.value.length >= 6 && hasNumber.test(pwd.value)) {
+    document.getElementById("pwdDesc").style.display = "none";
+    pwd.style.borderColor = "rgba(255, 255, 255, 0.2)";
   } else {
-    pwdDes.style.visibility = "visible";
-    pwdDes.style.marginTop = "8px";
-    pwdDes.innerHTML = "Password must contain atleast 1 Number !";
-    password.value = "";
+    document.getElementById("pwdDesc").style.display = "block";
+    pwd.style.borderColor = "#ff4d4d";
   }
 });
 
 btn.addEventListener("click", () => {
-    console.log("Pudicherry");
-    if (userName.value == "" || phone.value == "" || email.value == "" || pwd.value == "") {
-        alert('Please fill all details !');
-    }
-    else {
-        alert('Form Submitted Successfully');
-        userName.value = "";
-        phone.value = "";
-        email.value = "";
-        pwd.value = "";
-    }
-})
+  const isNameValid = /^[A-Z]/.test(userName.value);
+  const isEmailValid = email.value.endsWith("@gmail.com");
+  const isPhoneValid = phone.value.length === 10;
+  const isPwdValid = pwd.value.length >= 6 && /\d/.test(pwd.value);
+
+  if (isNameValid && isEmailValid && isPhoneValid && isPwdValid) {
+    alert("🚀 Form Submitted Successfully!");
+    // Resetting form
+    [userName, email, phone, pwd].forEach(el => (el.value = ""));
+  } else {
+    alert("❌ Please correct the errors before submitting.");
+  }
+});
 
 // Concepts used here ---
 // DOM Model. .value, alert, Events -- blur, click, display, visibility
