@@ -1,14 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="output.css" />
     <title>Bin - Convert</title>
-</head>
-<body>
-    <div class="root">
+  </head>
+  <body class="bg-gray-900">
+    <div class="flex justify-center items-center w-screen h-screen bg-green-900">
+      
+      <div class="w-11/12 max-w-lg p-10 bg-green-800 rounded-3xl flex flex-col items-center border-4 border-green-700 shadow-2xl">
+        
+        <div class="text-center mb-10">
+          <h1 class="text-4xl font-extrabold text-white tracking-tight">
+            Binary <span class="text-green-400">Converter</span>
+          </h1>
+          <p class="text-green-200 mt-2 text-sm font-medium uppercase tracking-widest">Decimal to Binary</p>
+        </div>
+
+        <div class="flex flex-col gap-6 w-full items-center">
+          
+          <div class="w-full">
+            <input 
+              id="input" 
+              type="number" 
+              placeholder="Enter Decimal Number" 
+              class="w-full h-14 text-center text-gray-800 text-xl font-bold rounded-xl border-none ring-4 ring-green-600 focus:ring-white transition-all outline-none" 
+            />
+          </div>
+
+          <button 
+            id="btn" 
+            class="group relative w-full h-14 bg-green-500 rounded-xl overflow-hidden transition-all hover:bg-green-400 active:scale-95 shadow-lg"
+          >
+            <span class="relative z-10 text-white font-bold text-lg uppercase tracking-wider">Convert Now</span>
+          </button>
+
+          <div class="w-full flex items-center justify-center gap-4 my-2">
+            <div class="h-px bg-green-700 flex-grow"></div>
+            <span class="text-green-500 font-bold text-xs uppercase">Result</span>
+            <div class="h-px bg-green-700 flex-grow"></div>
+          </div>
+
+          <div 
+            id="display" 
+            class="w-full h-16 bg-gray-900 border-2 border-green-500 rounded-xl text-green-400 font-mono text-2xl flex justify-center items-center shadow-inner"
+          >
+            00000000
+          </div>
+
+        </div>
+
+        <p class="mt-8 text-green-500 text-xs font-medium">
+          Input a decimal value to see the binary equivalent
+        </p>
+      </div>
     </div>
-</body>
+
+    <script src="index.js"></script>
+  </body>
 </html>
