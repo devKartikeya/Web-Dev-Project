@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.root {
+  background-color: rgb(70, 10, 126);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  box-shadow: inset 40px 30px 60px 30px rgb(78, 27, 160);
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cont {
+    height: 40%;
+    width: 40%;
+    background-color: rgb(55, 0, 128);
+    border-radius: 25px;
+    box-shadow: inset 30px 25px 50px darkblue;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#min, #sec, #milsec {
+    height: 42%;
+    width: 22%;
+    background-color: rgb(70, 10, 126);
+    border-radius: 20px;
+    box-shadow: inset 40px 30px 60px 30px rgb(102, 35, 209);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 20px 20px 30px 20px white;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.btn {
+    width: 75px;
+    height: 40px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: rgb(55, 255, 29);
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in; 
+}
+
+.btn:hover {
+    scale: 1.1;
+}
+
+h1 {
+    text-shadow: 40px 40px 60px 60px 60px white;
+    color: white;
+    font-size: 50px;
+}
