@@ -50,6 +50,8 @@ DOM Manipulation
 
 Event Handling
 
+Asynchronous JavaScript
+
 Form Handling & Validation
 
 
