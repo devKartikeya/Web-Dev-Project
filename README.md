@@ -1,6 +1,6 @@
-🌐 Web Dev Projects (HTML, CSS, JavaScript)
+🌐 Web Dev Projects (HTML, CSS, JavaScript & TypeScript)
 
-A collection of mini web development projects built using HTML, CSS, and JavaScript to practice core frontend concepts.
+A collection of mini web development projects built using HTML, CSS, and JavaScript or TypeScript to practice core frontend concepts.
 
 
 ---
@@ -54,6 +54,8 @@ Asynchronous JavaScript
 
 Form Handling & Validation
 
+TypeScript Implementation
+
 
 ---
 
@@ -97,7 +99,7 @@ Improve UI/UX and responsiveness
 
 Optimize JavaScript logic
 
-
+Improve TypeScript and Type Safety
 
 ---
 
