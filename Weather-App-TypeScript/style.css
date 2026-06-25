@@ -119,6 +119,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border: 2px solid white;
 }
 
 /* Card hover */

@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+html,
+body,
+#root {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+main {
+    width: 30%;
+    border-radius: 20px;
+    height: 70%;
+    background-color: darkgray;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    border: 2px solid white;
+}
+
+main #heading {
+    font-size: 24px;
+    font-weight: 900;
+}
+
+main #display {
+    width: 95%;
+    height: 4rem;
+    background-color: black;
+    padding: 10px;
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    text-align: right;
+    border: 2px solid white;
+}
+
+main section {
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main section .row {
+    width: 100%;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main section .row button {
+    width: 70px;
+    margin: 4px;
+    cursor: pointer;
+    height: 100%;
+    font-weight: 700;
+    font-size: 24px;
+    color: black;
+    border: 2px solid black;
+}
+
+main section .row button:hover {
+    background-color: darkgray;
+}
+
+main section #clear {
+    font-size: 20px;
+    width: 100%;
+    background-color: rgb(75, 244, 75);
+    transition: all 0.5s ease;
+    margin: 4px;
+}
+
+#clear:hover {
+    background-color: lightgreen;
+}
+
+main section #solve {
+    background-color: orange;
+}
+
+#solve:hover {
+    background-color: lightcoral;
+}
