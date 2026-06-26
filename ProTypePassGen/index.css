@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins";
+}
+
+#root,
+html,
+body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right bottom, darkblue, black, royalblue);
+    color: white;
+}
+
+main {
+    width: 40%;
+    height: 65%;
+    border-radius: 16px;
+    border: 2px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: 1rem;
+    align-items: center;
+}
+
+#heading {
+    width: 95%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+}
+
+#display {
+    width: 95%;
+    padding: 10px;
+    font-size: 24px;
+    height: 4rem;
+    background: linear-gradient(to right bottom black, darkblue);
+    color: white;
+    border-radius: 16px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main section {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 95%;
+}
+
+section #lengths,
+section #includes {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+section label {
+    color: pink;
+}
+
+#button {
+    padding: 10px;
+    font-weight: 800;
+    border-radius: 10px;
+    width: 95%;
+    font-size: 16px;
+    background-color: green;
+    color: white;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(66, 255, 66);
+    transform: translateY(-4px);
+}

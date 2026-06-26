@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProTypePassGen</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div id="root">
+        <main>
+            <div id="heading">
+                <h1>ProTypePassGen</h1>
+            </div>
+            <div id="display"></div>
+            <section>
+                <div id="lengths">
+                    <h4>Lengths</h4>
+                    <div>
+                        <input class="input" type="radio" name="length" id="six">
+                        <label for="six">Six</label>
+                    </div>
+                    <div>
+                        <input class="input" type="radio" name="length" id="eight">
+                        <label for="eight">Eight</label>
+                    </div>
+                    <div>
+                        <input class="input" type="radio" name="length" id="ten">
+                        <label for="ten">Ten</label>
+                    </div>
+                    <div>
+                        <input class="input" type="radio" name="length" id="twelve">
+                        <label for="twelve">Twelve</label>
+                    </div>
+                </div>
+                <div id="includes">
+                    <h4>Options</h4>
+                    <div>
+                        <input class="options" type="radio" id="number">
+                        <label for="number">Include Numbers</label>
+                    </div>
+                    <div>
+                        <input class="options" type="radio" id="special">
+                        <label for="special">Include Special</label>
+                    </div>
+                </div>
+            </section>
+            <button id="button">Generate</button>
+        </main>
+    </div>
+    <script src="index.js" type="module"></script>
+</body>
+
+</html>
