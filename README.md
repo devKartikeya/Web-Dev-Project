@@ -24,6 +24,8 @@ This repository contains multiple small projects created without any frameworks,
 
 📊 Percentage Calculator
 
+🔑 Password Generator 
+
 🔢 Binary Converter
 
 🧮 Calculator
