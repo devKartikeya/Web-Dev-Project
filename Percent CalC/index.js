@@ -9,5 +9,5 @@ btn.addEventListener("click", () => {
   const in4 = parseInt(document.getElementById("fourth").value);
   const in5 = parseInt(document.getElementById("fifth").value);
   let res = ((in1 + in2 + in3 + in4 + in5) * 100) / 500;
-  result.innerHTML = res;
+  result.innerHTML = `${res.toFixed(2)}%`;
 });
