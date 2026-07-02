@@ -13,12 +13,16 @@
           <h1>Percentage Calculator</h1>
           <p>Enter your marks (out of 100)</p>
           <div class="cont">
-            <input type="number" id="first" placeholder="1st Subject" />
-            <input type="number" id="second" placeholder="2nd Subject" />
-            <input type="number" id="third" placeholder="3rd Subject" />
-            <input type="number" id="fourth" placeholder="4th Subject" />
-            <input type="number" id="fifth" placeholder="5th Subject" />
+            <div class="input-container">
+              <input class="input" type="number" id="first"/>
+              <input class="input" type="number" id="second"/>
+              <input class="input" type="number" id="third"/>
+              <input class="input" type="number" id="fourth"/>
+              <input class="input" type="number" id="fifth"/>
+            </div>
             
+            <button id="addBtn">Add Input</button>
+
             <div class="res">
               <button id="btn">Calculate</button>
               <div id="result">0%</div>

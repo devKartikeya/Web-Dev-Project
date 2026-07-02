@@ -1,13 +1,26 @@
 console.log("Percentage Calculating");
 const result = document.getElementById("result");
+const card = document.querySelector('.input-container');
 const btn = document.getElementById("btn");
+const addBtn = document.getElementById('addBtn');
+
+addBtn.addEventListener('click', () => {
+  const newInput = document.querySelector('.input');
+  newInput.value = "";
+  card.appendChild(newInput.cloneNode(true));
+})
 
 btn.addEventListener("click", () => {
-  const in1 = parseInt(document.getElementById("first").value);
-  const in2 = parseInt(document.getElementById("second").value);
-  const in3 = parseInt(document.getElementById("third").value);
-  const in4 = parseInt(document.getElementById("fourth").value);
-  const in5 = parseInt(document.getElementById("fifth").value);
-  let res = ((in1 + in2 + in3 + in4 + in5) * 100) / 500;
-  result.innerHTML = `${res.toFixed(2)}%`;
+  const inputs = document.querySelectorAll('.input');
+  let sum = 0;
+  let count = 0;
+  inputs.forEach(input => {
+    const value = parseFloat(input.value);
+    if (!isNaN(value)) {
+      sum += value;
+      count++;
+    }
+  });
+  const percentage = (sum / (count * 100)) * 100;
+  result.textContent = `${percentage.toFixed(2)}%`;
 });

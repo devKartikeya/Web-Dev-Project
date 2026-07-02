@@ -25,6 +25,16 @@ body {
   width: 400px;
 }
 
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: 270px;
+  /* fixed height */
+  overflow-y: auto;
+  /* scroll instead of expanding */
+}
+
 h1 {
   color: white;
   margin-bottom: 10px;
@@ -64,6 +74,20 @@ input:focus {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+#addBtn {
+  width: 90%;
+  padding: 0.8rem;
+  margin: 0 auto;
+  background-color: pink;
+  font-size: 16px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+#addBtn:hover {
+  background-color: rgb(255, 72, 102);
+  transform: translateY(-2px);
 }
 
 button {
