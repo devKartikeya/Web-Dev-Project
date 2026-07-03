@@ -1,0 +1,185 @@
+/* Global reset + smooth font */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+  width: 100vw;
+  /* background: linear-gradient(135deg, #0f0f0f, #1a1a1a); */
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0.5rem;
+  align-items: center;
+}
+
+/* Header */
+header {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 3rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+/* Main layout */
+main {
+  width: 90%;
+  max-width: 1200px;
+  height: 70%;
+  display: flex;
+  align-items: center;
+  color: white;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Aside text */
+main aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start; /* or center */
+}
+
+
+main aside h1 {
+  font-size: 9rem;       /* very large */
+  font-weight: 900;      /* extra bold */
+  color: #4ef44e;        /* bright green accent */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+main aside h3 {
+  font-size: 4rem;       /* large subtitle */
+  font-weight: 600;
+  color: #ffffff;        /* white for contrast */
+  margin-top: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+main aside h1, main aside h3 {
+  text-shadow: 0 0 15px rgba(78, 244, 78, 0.8);
+}
+
+
+/* Section with input + button */
+main section {
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 1rem;
+  width: 50%;
+}
+
+/* Input styling */
+main section input {
+  width: 100%;
+  padding: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+  border-radius: 1rem;
+  border: none;
+  outline: none;
+  color: white;
+  background: linear-gradient(135deg, #4ef44e, #2bb82b);
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s ease;
+}
+
+main section input:focus {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #4ef44e;
+}
+
+#error {
+  height: 2rem;
+  width: 100%;
+  color: red;
+  font-weight: 600;
+}
+
+main section input::placeholder {
+  color: white;
+  opacity: 0.8;
+}
+
+/* Button styling */
+main section button {
+  padding: 0.8rem;
+  background: linear-gradient(135deg, #ffffff, #e0e0e0);
+  color: black;
+  cursor: pointer;
+  font-size: 18px;
+  width: 100%;
+  font-weight: 700;
+  border-radius: 0.6rem;
+  border: none;
+  transition: all 0.4s ease;
+}
+
+main section button:hover {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  transform: translateY(-4px);
+  color: white;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* Link styling */
+main section a {
+  width: 100%;
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  font-weight: 700;
+  align-items: center;
+  color: white;
+  font-size: 1rem;
+}
+
+footer a {
+  width: 50px;
+  cursor: pointer;
+}
+
+footer img {
+  width: 100%;
+  height: auto;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  main {
+    flex-direction: column;
+    height: auto;
+  }
+
+  main aside,
+  main section {
+    width: 100%;
+    text-align: center;
+  }
+}
