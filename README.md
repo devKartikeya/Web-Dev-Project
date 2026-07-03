@@ -30,10 +30,13 @@ This repository contains multiple small projects created without any frameworks,
 
 🧮 Calculator
 
+💫 Spinner
+
 🌡️ Temperature Converter
 
 📝 Todo App
 
+🎯 GitHub Profile Finder
 
 
 ---
@@ -74,8 +77,6 @@ git clone https://github.com/devKartikeya/Web-Dev-Project
 3. Run the project:
 
 Simply open the index.html file in your browser
-
-
 
 
 
