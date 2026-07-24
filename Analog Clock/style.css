@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clock {
+    height: 90%;
+    width: 50%;
+    background-color: bisque;
+    border-radius: 50%;
+}
+
+.hands {
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    background-color: black;
+    position: absolute;
+    width: 20px;
+}
+
+#seconds {
+    height: 200px;
+    top: 120px;
+}
+
+#minutes {
+    height: 180px;
+    top: 140px;
+}
+
+#hours {
+    height: 160px;
+    top: 160px;
+}
