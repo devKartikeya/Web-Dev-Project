@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age-Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            font-family: 'Poppins';
+        }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="root">
+        <section id="left">
+            <h1 id="first">Age</h1>
+            <h1 id="second">Calculator</h1>
+        </section>
+        <section id="right">
+            <div id="box">
+                <div id="input">
+                    <h2>Enter your DOB</h2>
+                    <input type="date" name="date" id="date">
+                    <button id="button">Find my age</button>
+                </div>
+                <div id="result">
+                    <p>You are: </p>
+                    <h3 id="years"></h3>
+                    <h3 id="months"></h3>
+                    <h3 id="days"></h3>
+                </div>
+            </div>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
